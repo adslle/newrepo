@@ -1,0 +1,23 @@
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/persistence   http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+   version="1.0">
+
+   <persistence-unit name="MyPU">
+       
+          <properties>
+          <property name="hibernate.archive.autodetection" value="class"/>
+          
+		  <!--DB Connexion values --> 
+          <property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC" />
+          <property name="hibernate.connection.url"   value="jdbc:sqlite:ecole.sqlite"/> 
+          <property name="hibernate.connection.username" value=""/>
+          <property name="hibernate.connection.password" value=""/>
+          <property name="hibernate.dialect" value="util.SQLiteDialect" /><!-- 
+          <property name="hibernate.show_sql" value="false" />  -->
+<!--           <property name="hibernate.hbm2ddl.auto" value="update" />  
+ -->      </properties>
+   </persistence-unit>    
+</persistence>
+
